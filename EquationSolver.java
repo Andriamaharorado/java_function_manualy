@@ -130,7 +130,7 @@ public class EquationSolver {
 	        for (int i = k + 1; i < ligne; i++) {
         		double vecteur = A[k][k] * B[i] - A[i][k] * B[k];
         		newVecteur[i] = vecteur;
-        		for (int j = 0; j < colonne; j++) {
+        		for (int j = colonne-1; j >=0; j--) {
         			double resultat = A[k][k] * A[i][j] - A[i][k] * A[k][j];
         			newMatrice[i][j] = resultat;
         		}
